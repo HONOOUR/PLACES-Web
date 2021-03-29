@@ -1,0 +1,26 @@
+h1 {
+ font-size: 500%;
+ font-weight: 900;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.container {
+  column-gap: 20px;
+  column-count: 2;
+  height: 120%;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
