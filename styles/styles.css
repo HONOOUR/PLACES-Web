@@ -1,26 +1,49 @@
 h1 {
- font-size: 500%;
- font-weight: 900;
- display: flex;
- align-items: center;
- justify-content: center;
+  height: 17vh;
+  font-size: 500%;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin-bottom: 3vh;
 }
 
 .container {
   column-gap: 20px;
-  column-count: 2;
-  height: 120%;
+  /* column-count: 2; */
+  height: 80vh;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;  
 }
 
 .card {
+  height: 70vh;
+  width: 45vw;
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  align-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-footer {
+.advertisement {
+  height: 10vh;
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black; 
+  margin-top: 3vh;
 }
