@@ -11,7 +11,7 @@ h1 {
   margin-bottom: 3vh;
 }
 
-.container {
+main {
   column-gap: 20px;
   /* column-count: 2; */
   height: 80vh;
@@ -26,10 +26,21 @@ h1 {
   border-color: black;  
 }
 
+.container {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-content: center;
+  align-items: center;
+}
+
 .card {
   height: 70vh;
   width: 45vw;
   display: flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
   align-items: center;
