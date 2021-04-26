@@ -56,7 +56,7 @@ function createSignInNode() {
 
 function createChatRoom() {
   let containerStyle = document.createElement('style');
-  containerStyle.textContent = `.container { 
+  containerStyle.textContent = `style { 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -68,6 +68,7 @@ function createChatRoom() {
   let cardStyle = document.createElement('style');
   cardStyle.textContent = `.card { 
     height: 70vh;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -77,16 +78,37 @@ function createChatRoom() {
     flex-grow: 1;
     flex-shrink: 1;
   }`
+
+  let profileStyle = document.createElement('style');
+  profileStyle.textContent = `.profileStyle { 
+    height: 70vh;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }`
+
+  document.head.appendChild(containerStyle);
+  document.head.appendChild(cardStyle);
+  document.head.appendChild(profileStyle);
   
   let container = document.createElement('div');
+  container.setAttribute('class', 'container');
+
   let chatRoom = document.createElement('div');
-  let profile = document.createElement('div');
+  chatRoom.setAttribute('class', 'card');
   chatRoom.innerHTML = "This is a chat room";
   let chatForm = document.createElement('form');
   let input = document.createElement('input');
   input.setAttribute('type', 'text');
   input.setAttribute('name', 'message');
   input.setAttribute('placeholder', "Enter a message");
+  
   let sendButton = document.createElement('button');
   sendButton.innerHTML = "Send";
   sendButton.setAttribute('id', 'send');
@@ -94,23 +116,22 @@ function createChatRoom() {
   let signOutButton = document.createElement('button');
   signOutButton.innerHTML = "sign out";
 
+  let profile = document.createElement('div');
+  profile.setAttribute('class', 'profileStyle');
   let name = document.createElement('div');
   name.innerHTML = "Host name: XXXXX";
   let code = document.createElement('div');
   code.innerHTML = "Hosting code : XXXXX";
-
-  chatRoom.appendChild(cardStyle)
+  
   chatRoom.appendChild(chatForm);
   chatRoom.appendChild(input);
   chatRoom.appendChild(sendButton);
-  profile.appendChild(cardStyle)
   profile.appendChild(signOutButton);
   profile.appendChild(name);
   profile.appendChild(code);
 
-  container.appendChild(containerStyle)
   container.appendChild(chatRoom);
-  chatRoom.append(profile);
+  container.appendChild(profile);
 
   return container;
 };
